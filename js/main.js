@@ -41,11 +41,6 @@ form.addEventListener("submit", (e) => {
     form.reset(); // Permet de vider le formulaire 
     displayReportsList(); // Sans cet appel, la liste des avis sur la page web ne serait pas mise à jour dynamiquement afin de matcher les changements dans les données.
 
-    // On cache le formulaire 
-    document.querySelector('#new').classList.add('hidden')
-
-    // On affiche l'avis nouvellement créé
-    displayReportsList();
 }});
 
 
@@ -104,8 +99,6 @@ function displayReportsList() {
         reportListContainer.innerHTML = '<i class="fa-solid fa-circle-info"></i> Aucun avis enregistré';
     }
 
-    // Afficher la section des avis
-    reportListSection.classList.remove("hidden");
 }
 
 
@@ -114,6 +107,7 @@ function displayReportsList() {
 
 // PERMET LE DISPLAY D'UNE SECTION EN FONCTION DE CE QUI EST CLIQUÉ DANS LE MENU
 document.querySelector('#newLink').addEventListener('click', function() {
+    document.querySelector('#landing').classList.add('hidden')
     document.querySelector('#new').classList.remove('hidden')
     document.querySelector('#delete').classList.add('hidden')
     document.querySelector('#list').classList.add('hidden')
@@ -121,6 +115,7 @@ document.querySelector('#newLink').addEventListener('click', function() {
 })
 
 document.querySelector('#deleteLink').addEventListener('click', function() {
+    document.querySelector('#landing').classList.add('hidden')
     document.querySelector('#new').classList.add('hidden')
     document.querySelector('#delete').classList.remove('hidden')
     document.querySelector('#list').classList.add('hidden')
@@ -128,6 +123,7 @@ document.querySelector('#deleteLink').addEventListener('click', function() {
 })
 
 document.querySelector('#listLink').addEventListener('click', function() {
+    document.querySelector('#landing').classList.add('hidden')
     document.querySelector('#new').classList.add('hidden')
     document.querySelector('#delete').classList.add('hidden')
     document.querySelector('#list').classList.remove('hidden')
