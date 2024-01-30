@@ -22,21 +22,26 @@ form.addEventListener("submit", (e) => {
     if (company == "company-4") {company = "Archimed"}
     if (company == "company-5") {company = "BeCom"}
 
-    //
+    // On vérifie que les champs "Entreprise" et "date" ne sont pas vides
     if (company === '') {
         alert("Création de l'avis impossible : vous n'avez sélectionné aucun client.")
     }
     else if (dateInput === '') {
         alert("Création de l'avis impossible : vous n'avez entré aucune date.")
     }
+    // S'ils ne sont pas vides, on ajoute le nouvel avis
     else {
-    // Ajout nouveau client
     reports.push(new Report(company, date, comment));
     window.localStorage.setItem('reports', JSON.stringify(reports));
     console.log(reports);
     document.getElementById('message').innerHTML = '<i class="fa-solid fa-circle-info"></i> Avis ajout&eacute;';
     form.reset(); // Permet de vider le formulaire 
     displayReportsList(); // Sans cet appel, la liste des avis sur la page web ne serait pas mise à jour dynamiquement afin de matcher les changements dans les données.
+
+    // On cache le formulaire 
+    document.querySelector('#new').classList.add('hidden')
+
+    // On affiche l'avis nouvellement créé
 }});
 
 
@@ -80,18 +85,19 @@ function displayReportsList() {
 
     if (reports.length > 0) {
         // Construire la liste des avis
-        let reportList = document.createElement("ul");
+        let reportList = document.createElement("div");
 
         reports.forEach((report) => {
-            let reportItem = document.createElement("li");
-            reportItem.textContent = `${report.company} - ${report.date}`;
+            let reportItem = document.createElement("div");
+            reportItem.classList.add("avis");
+            reportItem.innerHTML = `<div class="avisTitle">Avis de passage n° ${report.id} </div><div class="avisCompany"> ${report.company} </div><div class="avisDate"> ${report.date}</div><div class="avisComment"> ${report.comment}</div><hr/>`;
             reportList.appendChild(reportItem);
         });
 
         // Ajouter la liste des avis à la section
         reportListContainer.appendChild(reportList);
     } else {
-        reportListContainer.textContent = '<i class="fa-solid fa-circle-info"></i> Aucun avis enregistré';
+        reportListContainer.innerHTML = '<i class="fa-solid fa-circle-info"></i> Aucun avis enregistré';
     }
 
     // Afficher la section des avis

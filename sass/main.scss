@@ -1,7 +1,8 @@
 // main.scss
 @use "reset";
 @use "variables" as v;
-@use "header";
+@use "_header";
+@use "_report";
 
 body {
     margin:0;
@@ -30,6 +31,10 @@ a, a:hover, a:focus, a:visited {
     color:white;
 }
 
+section {
+    color:white;
+    background-color:v.$color-primary;
+}
 
 h1 {
     font-family: Inter, sans-serif;
@@ -48,19 +53,21 @@ footer {
 }
 
 form, #reportRecord {
-    color:white;
-    background-color:v.$color-primary;
     margin:20px;
     padding:20px;
     @media screen and (min-width: v.$sm-breakpoint) {
-        display:flex;
-        align-items:flex-end;
-        padding:20px 150px;
+        margin:0 150px;
+    }
+    @media screen and (min-width: v.$md-breakpoint) {
+        margin:0 300px;
+    }
+    @media screen and (min-width: v.$lg-breakpoint) {
+        margin:0 400px;
     }
     div {
+        flex-basis:33%;
         margin-bottom:20px;
         @media screen and (min-width: v.$sm-breakpoint) {
-            flex-basis:33%;
             margin:10px;
         }
     }
