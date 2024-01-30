@@ -6,14 +6,13 @@
     <script src="https://kit.fontawesome.com/477e17b079.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <link rel="icon" type="image/png" href="/img/logo-clean3000-mini.png">
     <script src="js/main.js" type="module" defer></script>
-    <script src="js/burgerMenu.js" type="module" defer></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Clean 3000</title>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img href="#landing" src="./img/logo-clean3000-transparent.png" alt="">
+        <div class="logo-container" >
+            <a href="#landing"><img src="./img/logo-clean3000-transparent.png" alt=""></a>
         </div>
         <nav>
             <ul class="menu">
@@ -44,7 +43,7 @@
                 </div>
                 <div>
                     <label for="date">Date d'intervention</label>
-                    <input type="date" id="date" name="date"></input>
+                    <input type="date" id="date" name="date"/>
                 </div>
                 <div>
                     <label for="comment">Observations</label>
@@ -60,7 +59,7 @@
             <form id="deleteReport" autocomplete="off">
                 <div>
                     <label for="recordNumber">Numéro d'intervention</label>
-                    <input type="number" id="recordNumber" name="recordNumber">
+                    <input type="number" inputmode="numeric" pattern="\d*" id="recordNumber" name="recordNumber">
                 </div>
                 <div>
                     <button type="submit">Supprimer</button>
@@ -70,6 +69,10 @@
         <section id="list" class="hidden">
             <h2>Liste des avis enregistrés</h2>
             <div id="reportRecord">Aucun avis enregistré</div>
+        </section>
+        <section id="details" class="hidden">
+            <h2>Détails de l'intervention</h2>
+            <div id="detailsRecord"></div>
         </section>
     </main>
     <footer>
