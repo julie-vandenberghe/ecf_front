@@ -16,11 +16,14 @@ form.addEventListener("submit", (e) => {
     let date = new Date(dateInput).toLocaleDateString('fr-FR'); // 2023-02-01 sera affiché 01/01/2023
     let comment = document.getElementById("comment").value;
 
+
     if (company == "company-1") {company = "Jardins d'Ariana"}
     if (company == "company-2") {company = "Jérôme Livran"}
     if (company == "company-3") {company = "Philippe Parguey"}
     if (company == "company-4") {company = "Archimed"}
     if (company == "company-5") {company = "BeCom"}
+
+    if (comment == "") {comment = "Pas d'observations"}
 
     // On vérifie que les champs "Entreprise" et "date" ne sont pas vides
     if (company === '') {
@@ -42,6 +45,7 @@ form.addEventListener("submit", (e) => {
     document.querySelector('#new').classList.add('hidden')
 
     // On affiche l'avis nouvellement créé
+    displayReportsList();
 }});
 
 
@@ -104,6 +108,8 @@ function displayReportsList() {
     reportListSection.classList.remove("hidden");
 }
 
+
+// FONCTION POUR AFFICHER L'AVIS NOUVELLEMENT CRÉé
 
 
 // PERMET LE DISPLAY D'UNE SECTION EN FONCTION DE CE QUI EST CLIQUÉ DANS LE MENU
