@@ -86,7 +86,7 @@ formCheckout.addEventListener("submit", (e) => {
     }
     else {
         //console.log("❌ Avis introuvable");
-        let div = `Avis introuvable`;
+        let div = `<i class="fa-solid fa-circle-info"></i> Avis introuvable`;
         document.getElementById('message').innerHTML = div;
     }
     displayReportsList();
