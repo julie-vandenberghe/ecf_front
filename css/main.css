@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+header .logo-container img {
+  width: 150px;
+  margin: 20px;
+}
+header nav ul {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+  background-color: #468237;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+body {
+  background-image: url(../img/board-465928_1280.jpg);
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  width: 100%;
+  /* height: 100%;
+  object-fit: cover; */
+}
+
+.hidden {
+  display: none;
+}
+
+a, a:hover, a:focus, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  padding: 10px;
+}
+
+footer {
+  background-color: #b89470;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+form, #reportRecord {
+  color: white;
+  background-color: #468237;
+  margin: 20px;
+  padding: 20px;
+}
+@media screen and (min-width: 767px) {
+  form, #reportRecord {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 150px;
+  }
+}
+form div, #reportRecord div {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 767px) {
+  form div, #reportRecord div {
+    flex-basis: 33%;
+    margin: 10px;
+  }
+}
+form input[type=text], form input[type=date], form select, form textarea, #reportRecord input[type=text], #reportRecord input[type=date], #reportRecord select, #reportRecord textarea {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+}
+form button, #reportRecord button {
+  color: white;
+  background-color: #b89470;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 767px) {
+  form button, #reportRecord button {
+    margin-top: 0;
+  }
+}
+
+div.container {
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */

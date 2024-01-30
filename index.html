@@ -24,6 +24,28 @@
     </header>
     <main>
         <section id="new">
+            <h1>Avis de passage</h2>
+            <form id="formNewReport" autocomplete="off">
+                <div>
+                    <label for="company-select">Entreprise/client</label>
+                    <select name="companies" id="company-select">
+                        <option value="company-1">Choix 1</option>
+                        <option value="company-2">Choix 2</option>
+                        <option value="company-3">Choix 3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Date d'intervention</label>
+                    <input type="date" id="date" name="date"></date>
+                </div>
+                <div>
+                    <label for="comment">Observations</label>
+                    <textarea id="comment" name="comment"></textarea>
+                </div>    
+                <div>
+                    <button type="submit">Ajouter</button>
+                </div>
+            </form>
         </section>
         <section id="delete" class="hidden">
         </section>
