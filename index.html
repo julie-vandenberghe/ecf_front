@@ -25,13 +25,15 @@
     <main>
         <section id="new">
             <h1>Avis de passage</h2>
-            <form id="formNewReport" autocomplete="off">
+            <form id="newReport" autocomplete="off">
                 <div>
                     <label for="company-select">Entreprise/client</label>
                     <select name="companies" id="company-select">
-                        <option value="company-1">Choix 1</option>
-                        <option value="company-2">Choix 2</option>
-                        <option value="company-3">Choix 3</option>
+                        <option value="company-1">Jardins d'Ariana</option>
+                        <option value="company-2">Jérôme Livran</option>
+                        <option value="company-3">Philippe Parguey</option>
+                        <option value="company-4">Archimed</option>
+                        <option value="company-5">BeCom</option>
                     </select>
                 </div>
                 <div>
@@ -48,8 +50,20 @@
             </form>
         </section>
         <section id="delete" class="hidden">
+            <h1>Supprimer un avis</h1>
+            <form id="deleteReport" autocomplete="off">
+                <div>
+                    <label for="recordNumber">Numéro d'intervention</label>
+                    <input type="number" id="recordNumber" name="recordNumber">
+                </div>
+                <div>
+                    <button type="submit">Supprimer</button>
+                </div>
+        </form>
         </section>
         <section id="list" class="hidden">
+            <h1>Liste des avis enregistrés</h1>
+            <div id="reportRecord">Aucun avis enregistré</div>
         </section>
     </main>
     <footer>
