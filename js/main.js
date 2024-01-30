@@ -22,7 +22,14 @@ form.addEventListener("submit", (e) => {
     if (company == "company-4") {company = "Archimed"}
     if (company == "company-5") {company = "BeCom"}
 
-
+    //
+    if (company === '') {
+        alert("Création de l'avis impossible : vous n'avez sélectionné aucun client.")
+    }
+    else if (dateInput === '') {
+        alert("Création de l'avis impossible : vous n'avez entré aucune date.")
+    }
+    else {
     // Ajout nouveau client
     reports.push(new Report(company, date, comment));
     window.localStorage.setItem('reports', JSON.stringify(reports));
@@ -30,7 +37,7 @@ form.addEventListener("submit", (e) => {
     document.getElementById('message').innerHTML = '<i class="fa-solid fa-circle-info"></i> Avis ajout&eacute;';
     form.reset(); // Permet de vider le formulaire 
     displayReportsList(); // Sans cet appel, la liste des avis sur la page web ne serait pas mise à jour dynamiquement afin de matcher les changements dans les données.
-});
+}});
 
 
 // TRAITEMENT DU FORMULAIRE POUR RECHERCHER UN AVIS (ET LE SUPPRIMER)
