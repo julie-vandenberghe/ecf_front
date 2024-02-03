@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: black;
+  background-color: #3d3d33;
   color: white;
 }
 header .logo-container {
@@ -127,7 +127,7 @@ a, a:hover, a:focus, a:visited {
   color: white;
 }
 
-section#new, section#delete, section#list {
+section#new, section#delete, section#list, section#details {
   color: white;
   background-color: #3d3d33;
 }
@@ -149,9 +149,13 @@ h2 {
 
 footer {
   background-color: #468237;
+  opacity: 0.7;
   text-align: center;
   padding: 20px;
   color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 form, #reportRecord {
