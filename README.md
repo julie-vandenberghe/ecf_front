@@ -3,7 +3,7 @@
 This project was carried out during my training at M2i. 
 Clean 3000 is a fictional window cleaning company. We had been asked to create a digital solution for them, so that the employees could **create a service report**, then have a **summary** of it. They could also **delete a specific report**.
 
-![Clean3000_mobile-version](https://github.com/julie-vandenberghe/ecf_front/assets/120843391/a091d979-ee2c-4549-a7a6-d6fbdc3c563d)
+![Clean3000_mobile-version](https://github.com/julie-vandenberghe/ecf_front/assets/120843391/09b8a533-10a1-4208-8d5d-59512abd0374)
 
 ## Key Features
 
